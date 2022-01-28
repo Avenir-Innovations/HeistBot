@@ -17,4 +17,9 @@ struct Vector2
     x = _f[0];
     y= _f[1];
   }
+
+  inline Vector2 operator - (Vector2 a, Vector2 b)
+  {
+    return {a.x + b.x, a.y + b.y};
+  }
 };
