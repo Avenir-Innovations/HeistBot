@@ -75,13 +75,13 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClCompile Include="..\..\HeistBot1\HeistBot\MovementEngine.cpp" />
-    <ClCompile Include="..\..\HeistBot1\HeistBot\Vector2.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MovementEngine.cpp" />
+    <ClCompile Include="Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\HeistBot1\HeistBot\MovementEngine.h" />
-    <ClInclude Include="..\..\HeistBot1\HeistBot\Vector2.h" />
+    <ClInclude Include="MovementEngine.h" />
+    <ClInclude Include="Vector2.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

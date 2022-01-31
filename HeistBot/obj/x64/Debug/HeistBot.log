@@ -1,0 +1,15 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  main.cpp
+  MovementEngine.cpp
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MovementEngine.cpp(6,33): warning : conversion from ‘double’ to ‘float’ changes value from ‘3.1415926535897931e+0’ to ‘3.14159274e+0f’ [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MovementEngine.cpp(12,19): warning : conversion from ‘double’ to ‘float’ may change value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MovementEngine.cpp(12,19): warning :    12 |     float X = sqrt(pow(x, 2) + pow(y, 2));
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MovementEngine.cpp(12,19): warning :       |               ~~~~^~~~~~~~~~~~~~~~~~~~~~~
+  Vector2.cpp
+  Linking objects
+  HeistBot.vcxproj -> C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\bin\x64\Debug\HeistBot.out

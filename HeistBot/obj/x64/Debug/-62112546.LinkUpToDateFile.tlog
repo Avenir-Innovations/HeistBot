@@ -1,0 +1,1 @@
+g++ -o "/home/unnamed/projects/HeistBot/bin/x64/Debug/HeistBot.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/unnamed/projects/HeistBot/obj/x64/Debug/main.o /home/unnamed/projects/HeistBot/obj/x64/Debug/MovementEngine.o /home/unnamed/projects/HeistBot/obj/x64/Debug/Vector2.o
