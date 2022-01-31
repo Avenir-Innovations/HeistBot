@@ -1,7 +1,7 @@
-// HeistBot.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// HeistBot.cpp : Defines the entry point for the application.
 //
 
-#include <iostream>
+#include "HeistBot.h"
 #include <string>
 #include "Vector2.h"
 #include "MovementEngine.h"
@@ -28,4 +28,3 @@ int main()
     cout << "That Concludes Today's Show!\n";
     return 0;
 }
-
