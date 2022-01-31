@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "31f4caa7-b0a7-4b8d-b1ca-08c5fe7e2f5f": {
+      "ProjectGuid": "31f4caa7-b0a7-4b8d-b1ca-08c5fe7e2f5f",
+      "DisplayName": "HeistBot",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
