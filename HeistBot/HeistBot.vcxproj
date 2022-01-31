@@ -76,11 +76,15 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MappingEngine.cpp" />
     <ClCompile Include="MovementEngine.cpp" />
+    <ClCompile Include="shape.cpp" />
     <ClCompile Include="Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MappingEngine.h" />
     <ClInclude Include="MovementEngine.h" />
+    <ClInclude Include="shape.h" />
     <ClInclude Include="Vector2.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
