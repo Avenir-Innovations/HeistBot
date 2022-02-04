@@ -2,7 +2,7 @@
 #include "Vector2.h"
 
 using namespace std;
-class shape
+class Shape
 {
 public:
 	//making everything triangles
@@ -10,8 +10,10 @@ public:
 
 	bool IsInside(Vector2 _pos);
 	bool IsInside(Vector2 _pos, float tol);
+	bool IsInside(Vector2 _pos, float tolX, float tolY);
 
 	bool IsOnEdge(Vector2 _pos);
 	bool IsOnEdge(Vector2 _pos, float tol);
+	bool IsOnEdge(Vector2 _pos, float tolX, float tolY);
 };
 

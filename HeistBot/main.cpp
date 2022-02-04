@@ -8,6 +8,7 @@ using namespace std;
 
 int main()
 {
+    //Testing Inverse Kinematics + Vector2
     int endThing = 1;
     cout << "How Many Rounds?\n";
     cin >> endThing;
