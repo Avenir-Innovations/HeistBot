@@ -1,12 +1,13 @@
 #pragma once
 #include "Vector2.h"
+#include <array>
+#include <list>
 
 using namespace std;
 class Shape
 {
 public:
-	//making everything triangles
-	array<Vector2, 3> vertices;
+	list<Vector2> vertices;
 
 	bool IsInside(Vector2 _pos);
 	bool IsInside(Vector2 _pos, float tol);

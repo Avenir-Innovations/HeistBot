@@ -11,6 +11,7 @@ class MappingEngine
 	//(x,y) = x and y inches
 private:
 	list<Shape> polygons;
+	list<Vector2> allVertices;
 	list<Shape> gernatedPolygons;
 
 	void GenerateShape (Vector2 _input);
