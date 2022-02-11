@@ -19,18 +19,20 @@ void MappingEngine::CheckShapes ()
     list<Vector2>::iterator vertex = inputPoints.begin();
     for (int ii = 0; ii < inputSize; ii++)
     {
+        bool addVertex = true;
         list<Shape>::iterator polygon = polygons.begin();
         for (int i = 0; i < size(polygons); i++)
         {
             if ((find(((*polygon).vertices).begin(), ((*polygon).vertices).end(), ((*polygon).vertices)) != ((*polygon).vertices).end()) || (*polygon).IsInside(*vertex))
             {
-                _ip.remove(*vertex);
+                addVertex = false;
             }
             else
             {
-                GenerateShape(*vertex);
-                _ip.remove(*vertex);
+                
             }
+            if (addVertex) allVertices.push_back(*vertex);
+            _ip.remove(*vertex);
             if (i < size(polygons) - 1) polygon = next(polygon, 1);
         }
         if (ii < inputSize - 1) vertex = next(vertex, 1);
