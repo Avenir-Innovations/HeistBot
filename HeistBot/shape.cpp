@@ -1,5 +1,5 @@
 #include "Shape.h"
-#include<array>
+
 
 using namespace std;
 
@@ -9,33 +9,39 @@ bool Shape::IsInside(Vector2 pos)
 	bool left = false;
 	bool right = false;
 
-	if (size(vertices) == 0) { cout << "vertices in shape Has a Size of 0"; return false; }
-
-	for (int i = 0; i < size(vertices); i++)
+	if (vertices.size() == 0)
 	{
-		if (i != size(vertices) - i + 1)
+		cout << "vertices in shape Has a Size of 0";
+		return false;
+	}
+
+	for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
+
+	for (int i = 0; i < vertices.size(); i++)
+	{
+		if (i != vertices.size() - 1)
 		{
-			if ((pos.x <= vertices[i].x || pos.x <= vertices[i + 1].x) && !left)
+			if ((pos.x <= get(vertices, i).x || pos.x <= get(vertices, i + 1).x) && !left)
 			{
-				if (!((pos.y >= vertices[i].y && pos.y <= vertices[i + 1].y) || (pos.y <= vertices[i].y && pos.y >= vertices[i + 1].y))) _in = false;
+				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) _in = false;
 				else left = true;
 			}
-			else if ((pos.x >= vertices[i].x || pos.x >= vertices[i + 1].x) && !right)
+			else if ((pos.x >= get(vertices, i).x || pos.x >= get(vertices, i + 1).x) && !right)
 			{
-				if (!((pos.y >= vertices[i].y && pos.y <= vertices[i + 1].y) || (pos.y <= vertices[i].y && pos.y >= vertices[i + 1].y))) _in = false;
+				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) _in = false;
 				else right = true;
 			}
 		}
 		else
 		{
-			if ((pos.x <= vertices[i].x || pos.x <= vertices[0].x) && !left)
+			if ((pos.x <= get(vertices, i).x || pos.x <= get(vertices, 0).x) && !left)
 			{
-				if (!((pos.y >= vertices[i].y && pos.y <= vertices[0].y) || (pos.y <= vertices[i].y && pos.y >= vertices[0].y))) _in = false;
+				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) _in = false;
 				else left = true;
 			}
-			else if ((pos.x >= vertices[i].x || pos.x >= vertices[0].x) && !right)
+			else if ((pos.x >= get(vertices, i).x || pos.x >= get(vertices, 0).x) && !right)
 			{
-				if (!((pos.y >= vertices[i].y && pos.y <= vertices[0].y) || (pos.y <= vertices[i].y && pos.y >= vertices[0].y))) _in = false;
+				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) _in = false;
 				else right = true;
 			}
 		}
@@ -51,33 +57,35 @@ bool Shape::IsInside(Vector2 pos, float tol) {
 	bool left = false;
 	bool right = false;
 
-	if (size(vertices) == 0) { cout << "vertices in shape Has a Size of 0"; return false; }
+	if (vertices.size() == 0) { cout << "vertices in shape Has a Size of 0"; return false; }
 
-	for (int i = 0; i < size(vertices); i++)
+	for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
+
+	for (int i = 0; i < vertices.size(); i++)
 	{
-		if (i != size(vertices) - i + 1)
+		if (i != vertices.size() - 1)
 		{
-			if (((pos.x - tol) <= vertices[i].x || (pos.x - tol) <= vertices[i + 1].x) && !left)
+			if (((pos.x - tol) <= get(vertices, i).x || (pos.x - tol) <= get(vertices, i + 1).x) && !left)
 			{
-				if (!(((pos.y + tol) >= vertices[i].y && (pos.y - tol) <= vertices[i + 1].y) || ((pos.y - tol) <= vertices[i].y && (pos.y + tol) >= vertices[i + 1].y))) _in = false;
+				if (!(((pos.y + tol) >= get(vertices, i).y && (pos.y - tol) <= get(vertices, i + 1).y) || ((pos.y - tol) <= get(vertices, i).y && (pos.y + tol) >= get(vertices, i + 1).y))) _in = false;
 				else left = true;
 			}
-			else if (((pos.x + tol) >= vertices[i].x || (pos.x + tol) >= vertices[i + 1].x) && !right)
+			else if (((pos.x + tol) >= get(vertices, i).x || (pos.x + tol) >= get(vertices, i + 1).x) && !right)
 			{
-				if (!(((pos.y + tol) >= vertices[i].y && (pos.y - tol) <= vertices[i + 1].y) || ((pos.y - tol) <= vertices[i].y && (pos.y + tol) >= vertices[i + 1].y))) _in = false;
+				if (!(((pos.y + tol) >= get(vertices, i).y && (pos.y - tol) <= get(vertices, i + 1).y) || ((pos.y - tol) <= get(vertices, i).y && (pos.y + tol) >= get(vertices, i + 1).y))) _in = false;
 				else right = true;
 			}
 		}
 		else
 		{
-			if (((pos.x - tol) <= vertices[i].x || (pos.x - tol) <= vertices[0].x) && !left)
+			if (((pos.x - tol) <= get(vertices, i).x || (pos.x - tol) <= get(vertices, 0).x) && !left)
 			{
-				if (!(((pos.y + tol) >= vertices[i].y && (pos.y - tol) <= vertices[0].y) || ((pos.y - tol) <= vertices[i].y && (pos.y + tol) >= vertices[0].y))) _in = false;
+				if (!(((pos.y + tol) >= get(vertices, i).y && (pos.y - tol) <= get(vertices, 0).y) || ((pos.y - tol) <= get(vertices, i).y && (pos.y + tol) >= get(vertices, 0).y))) _in = false;
 				else left = true;
 			}
-			else if (((pos.x + tol) >= vertices[i].x || (pos.x + tol) >= vertices[0].x) && !right)
+			else if (((pos.x + tol) >= get(vertices, i).x || (pos.x + tol) >= get(vertices, 0).x) && !right)
 			{
-				if (!(((pos.y + tol) >= vertices[i].y && (pos.y - tol) <= vertices[0].y) || ((pos.y - tol) <= vertices[i].y && (pos.y + tol) >= vertices[0].y))) _in = false;
+				if (!(((pos.y + tol) >= get(vertices, i).y && (pos.y - tol) <= get(vertices, 0).y) || ((pos.y - tol) <= get(vertices, i).y && (pos.y + tol) >= get(vertices, 0).y))) _in = false;
 				else right = true;
 			}
 		}
@@ -93,33 +101,36 @@ bool Shape::IsInside(Vector2 pos, float tolX, float tolY) {
 	bool left = false;
 	bool right = false;
 	
-	if (size(vertices) == 0) { cout << "vertices in shape Has a Size of 0"; return false; }
+	if (vertices.size() == 0) { cout << "vertices in shape Has a Size of 0"; return false; }
 
-	for (int i = 0; i < size(vertices); i++)
+	for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
+
+	for (int i = 0; i < vertices.size(); i++)
 	{
-		if (i != size(vertices) - i + 1)
+		if (i != vertices.size() - 1)
 		{
-			if (((pos.x - tolX) <= vertices[i].x || (pos.x - tolX) <= vertices[i + 1].x) && !left)
+			if (((pos.x - tolX) <= get(vertices, i).x || (pos.x - tolX) <= get(vertices, i + 1).x) && !left)
 			{
-				if (!(((pos.y + tolY) >= vertices[i].y && (pos.y - tolY) <= vertices[i + 1].y) || ((pos.y - tolY) <= vertices[i].y && (pos.y + tolY) >= vertices[i + 1].y))) _in = false;
+				if (!(((pos.y + tolY) >= get(vertices, i).y && (pos.y - tolY) <= get(vertices, i + 1).y) || ((pos.y - tolY) <= get(vertices, i).y && (pos.y + tolY) >= get(vertices, i + 1).y))) _in = false;
 				else left = true;
 			}
-			else if (((pos.x + tolX) >= vertices[i].x || (pos.x + tolX) >= vertices[i + 1].x) && !right)
+			else if (((pos.x + tolX) >= get(vertices, i).x || (pos.x + tolX) >= get(vertices, i + 1).x) && !right)
 			{
-				if (!(((pos.y + tolY) >= vertices[i].y && (pos.y - tolY) <= vertices[i + 1].y) || ((pos.y - tolY) <= vertices[i].y && (pos.y + tolY) >= vertices[i + 1].y))) _in = false;
+				if (!(((pos.y + tolY) >= get(vertices, i).y && (pos.y - tolY) <= get(vertices, i + 1).y) || ((pos.y - tolY) <= get(vertices, i).y && (pos.y + tolY) >= get(vertices, i + 1).y))) _in = false;
 				else right = true;
 			}
 		}
 		else
 		{
-			if (((pos.x - tol) <= vertices[i].x || (pos.x - tol) <= vertices[0].x) && !left)
+			if (((pos.x - tolX) <= get(vertices, i).x || (pos.x - tolX) <= get(vertices, 0).x) && !left)
 			{
-				if (!(((pos.y + tol) >= vertices[i].y && (pos.y - tol) <= vertices[0].y) || ((pos.y - tol) <= vertices[i].y && (pos.y + tol) >= vertices[0].y))) _in = false;
+				if (!(((pos.y + tolY) >= get(vertices, i).y && (pos.y - tolY) <= get(vertices, 0).y) || ((pos.y - tolY) <= get(vertices, i).y && (pos.y + tolY) >= get(vertices, 0).y))) _in = false;
+				if (!(((pos.y + tolY) >= get(vertices, i).y && (pos.y - tolY) <= get(vertices, 0).y) || ((pos.y - tolY) <= get(vertices, i).y && (pos.y + tolY) >= get(vertices, 0).y))) _in = false;
 				else left = true;
 			}
-			else if (((pos.x + tol) >= vertices[i].x || (pos.x + tol) >= vertices[0].x) && !right)
+			else if (((pos.x + tolX) >= get(vertices, i).x || (pos.x + tolX) >= get(vertices, 0).x) && !right)
 			{
-				if (!(((pos.y + tol) >= vertices[i].y && (pos.y - tol) <= vertices[0].y) || ((pos.y - tol) <= vertices[i].y && (pos.y + tol) >= vertices[0].y))) _in = false;
+				if (!(((pos.y + tolY) >= get(vertices, i).y && (pos.y - tolY) <= get(vertices, 0).y) || ((pos.y - tolY) <= get(vertices, i).y && (pos.y + tolY) >= get(vertices, 0).y))) _in = false;
 				else right = true;
 			}
 		}

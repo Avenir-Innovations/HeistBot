@@ -1,7 +1,10 @@
 #pragma once
 #include "Vector2.h"
 #include <array>
+#include "ListsExtensions.h"
 #include <list>
+#include <array>
+#include <iostream>
 
 using namespace std;
 class Shape
@@ -17,4 +20,6 @@ public:
 	bool IsOnEdge(Vector2 _pos, float tol);
 	bool IsOnEdge(Vector2 _pos, float tolX, float tolY);
 };
+
+
 

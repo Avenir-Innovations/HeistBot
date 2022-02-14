@@ -1,7 +1,4 @@
-#include <iostream>
 #include "MovementEngine.h"
-#include "Vector2.h"
-#include <math.h>
 
 const float PI = std::atan(1.0) * 4;
 

@@ -1,5 +1,11 @@
 #pragma once
 #include "Vector2.h"
+#include <array>
+#include <iostream>
+#include "ListsExtensions.h"
+#include "Vector2.h"
+#include <math.h>
+#include <algorithm>
 
 class MovementEngine
 {

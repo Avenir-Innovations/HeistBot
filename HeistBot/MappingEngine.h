@@ -1,10 +1,13 @@
 #pragma once
 #include "Vector2.h"
 #include "Shape.h"
+#include "ListsExtensions.h"
 #include <array>
 #include <list>
 #include <thread>
 #include <algorithm>
+
+using namespace std;
 
 class MappingEngine
 {
