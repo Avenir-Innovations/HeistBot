@@ -8,6 +8,8 @@ bool Shape::IsInside(Vector2 pos)
 	bool _in = true;
 	bool left = false;
 	bool right = false;
+	bool up = false;
+	bool down = false;
 
 	if (vertices.size() == 0)
 	{
@@ -31,6 +33,17 @@ bool Shape::IsInside(Vector2 pos)
 				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) _in = false;
 				else right = true;
 			}
+
+			if ((pos.y <= get(vertices, i).y || pos.y <= get(vertices, i + 1).y) && !up)
+			{
+				if (!((pos.x >= get(vertices, i).x && pos.x <= get(vertices, i + 1).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, i + 1).x))) _in = false;
+				else up = true;
+			}
+			else if ((pos.y >= get(vertices, i).y || pos.y >= get(vertices, i + 1).y) && !down)
+			{
+				if (!((pos.x >= get(vertices, i).x && pos.x <= get(vertices, i + 1).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, i + 1).x))) _in = false;
+				else down = true;
+			}
 		}
 		else
 		{
@@ -44,10 +57,21 @@ bool Shape::IsInside(Vector2 pos)
 				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) _in = false;
 				else right = true;
 			}
+
+			if ((pos.y <= get(vertices, i).y || pos.y <= get(vertices, 0).y) && !up)
+			{
+				if (!((pos.x >= get(vertices, i).x && pos.x <= get(vertices, 0).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, 0).x))) _in = false;
+				else up = true;
+			}
+			else if ((pos.y >= get(vertices, i).y || pos.y >= get(vertices, 0).y) && !down)
+			{
+				if (!((pos.x >= get(vertices, i).x && pos.x <= get(vertices, 0).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, 0).x))) _in = false;
+				else down = true;
+			}
 		}
 	}
 	
-	if (!(right && left)) _in = false;
+	if (!(right && left && up && down)) _in = false;
 
 	return _in;
 }
