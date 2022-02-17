@@ -23,53 +23,109 @@ bool Shape::IsInside(Vector2 pos)
 	{
 		if (i != vertices.size() - 1)
 		{
-			if ((pos.x <= get(vertices, i).x || pos.x <= get(vertices, i + 1).x) && !left)
-			{
-				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) _in = false;
-				else left = true;
-			}
-			else if ((pos.x >= get(vertices, i).x || pos.x >= get(vertices, i + 1).x) && !right)
-			{
-				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) _in = false;
-				else right = true;
-			}
+			cout << i;
+			cout << "\n";
 
-			if ((pos.y <= get(vertices, i).y || pos.y <= get(vertices, i + 1).y) && !up)
+			float m = (get(vertices, i).y - get(vertices, i + 1).y) / (get(vertices, i).x - get(vertices, i + 1).x);
+			float b = get(vertices, i).y - (get(vertices, i).x * m);
+
+			
+			if (get(vertices, i).x == get(vertices, i + 1).x)
 			{
-				if (!((pos.x >= get(vertices, i).x && pos.x <= get(vertices, i + 1).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, i + 1).x))) _in = false;
-				else up = true;
+				if ((pos.x <= get(vertices, i).x) && !left)
+				{
+					cout << "left condition met\n";
+					if (((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) left = true;
+				}
+				if ((pos.x >= get(vertices, i).x) && !right)
+				{
+					cout << "right condition met\n";
+					if (((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) right = true;
+				}
 			}
-			else if ((pos.y >= get(vertices, i).y || pos.y >= get(vertices, i + 1).y) && !down)
+			else
 			{
-				if (!((pos.x >= get(vertices, i).x && pos.x <= get(vertices, i + 1).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, i + 1).x))) _in = false;
-				else down = true;
+				if ((pos.x <= ((pos.y - b) / m)) && !left)
+				{
+					cout << "left condition met\n";
+					if (((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) left = true;
+				}
+				if ((pos.x >= ((pos.y - b) / m)) && !right)
+				{
+					cout << "right condition met\n";
+					if (((pos.y >= get(vertices, i).y && pos.y <= get(vertices, i + 1).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, i + 1).y))) right = true;
+				}
+			}
+			
+
+			if ((pos.y <= ((pos.x * m) + b)) && !up)
+			{
+				cout << "up condition met\n";
+				if (((pos.x >= get(vertices, i).x && pos.x <= get(vertices, i + 1).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, i + 1).x))) up = true;
+			}
+			if ((pos.y >= ((pos.x * m) + b)) && !down)
+			{
+				cout << "down condition met\n";
+				if (((pos.x >= get(vertices, i).x && pos.x <= get(vertices, i + 1).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, i + 1).x))) down = true;
 			}
 		}
 		else
 		{
-			if ((pos.x <= get(vertices, i).x || pos.x <= get(vertices, 0).x) && !left)
+			cout << i;
+			cout << "\n";
+			cout << "approaching max\n";
+			
+
+			float m = (get(vertices, i).y - get(vertices, 0).y) / (get(vertices, i).x - get(vertices, 0).x);
+			float b = get(vertices, i).y - (get(vertices, i).x * m);
+
+			cout << ((pos.x * m) + b);
+			cout << "\n";
+
+			if (get(vertices, i).x == get(vertices, 0).x)
 			{
-				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) _in = false;
-				else left = true;
+				if ((pos.x <= get(vertices, i).x) && !left)
+				{
+					cout << "left condition met\n";
+					if (((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) left = true;
+				}
+				if ((pos.x >= get(vertices, i).x) && !right)
+				{
+					cout << "right condition met\n";
+					if (((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) right = true;
+				}
 			}
-			else if ((pos.x >= get(vertices, i).x || pos.x >= get(vertices, 0).x) && !right)
+			else
 			{
-				if (!((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) _in = false;
-				else right = true;
+				if ((pos.x <= ((pos.y - b) / m)) && !left)
+				{
+					cout << "left condition met\n";
+					if (((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) left = true;
+				}
+				if ((pos.x >= ((pos.y - b) / m)) && !right)
+				{
+					cout << "right condition met\n";
+					if (((pos.y >= get(vertices, i).y && pos.y <= get(vertices, 0).y) || (pos.y <= get(vertices, i).y && pos.y >= get(vertices, 0).y))) right = true;
+				}
 			}
 
-			if ((pos.y <= get(vertices, i).y || pos.y <= get(vertices, 0).y) && !up)
+			if ((pos.y <= ((pos.x * m) + b)) && !up)
 			{
-				if (!((pos.x >= get(vertices, i).x && pos.x <= get(vertices, 0).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, 0).x))) _in = false;
-				else up = true;
+				cout << "up condition met\n";
+				if (((pos.x >= get(vertices, i).x && pos.x <= get(vertices, 0).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, 0).x))) up = true;
 			}
-			else if ((pos.y >= get(vertices, i).y || pos.y >= get(vertices, 0).y) && !down)
+			if ((pos.y >= ((pos.x * m) + b)) && !down)
 			{
-				if (!((pos.x >= get(vertices, i).x && pos.x <= get(vertices, 0).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, 0).x))) _in = false;
-				else down = true;
+				cout << "down condition met\n";
+				if (((pos.x >= get(vertices, i).x && pos.x <= get(vertices, 0).x) || (pos.x <= get(vertices, i).x && pos.x >= get(vertices, 0).x))) down = true;
 			}
 		}
 	}
+
+	if (right) cout << "right = true "; else cout << "right = false ";
+	if (left) cout << "left = true "; else cout << "left = false ";
+	if (up) cout << "up = true "; else cout << "up = false ";
+	if (down) cout << "down = true\n"; else cout << "down = false\n";
 	
 	if (!(right && left && up && down)) _in = false;
 
