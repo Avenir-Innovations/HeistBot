@@ -15,9 +15,9 @@ class MappingEngine
 private:
 	list<Shape> polygons;
 	list<Vector2> allVertices;
-	list<Shape> gernatedPolygons;
+	list<Shape> genernatedPolygons;
 
-	void GenerateShape (Vector2 _input);
+	void GenerateShapes ();
 	void CheckShapes ();
 	void Update ();
 	

@@ -177,6 +177,7 @@ bool Shape::IsInside(Vector2 pos, float tol) {
 }
 
 bool Shape::IsInside(Vector2 pos, float tolX, float tolY) {
+
 	bool _in = true;
 	bool left = false;
 	bool right = false;
@@ -219,4 +220,31 @@ bool Shape::IsInside(Vector2 pos, float tolX, float tolY) {
 	if (!(right && left)) _in = false;
 
 	return _in;
+}
+
+
+
+bool Shape::IsOnEdge(Vector2 _pos)
+{
+	bool _b = false;
+	for (int i = 0; i < vertices.size(); i++)
+	{
+		if (i != vertices.size() - 1)
+		{
+			float m = (get(vertices, i).y - get(vertices, i + 1).y) / (get(vertices, i).x - get(vertices, i + 1).x);
+			float b = get(vertices, i).y - (get(vertices, i).x * m);
+
+			if (get(vertices, i).x == get(vertices, i + 1).x && get(vertices, i).x == _pos.x) _b = true;
+			else if (_pos.y = (_pos.x * m) + b) _b = true;
+		}
+		else
+		{
+			float m = (get(vertices, i).y - get(vertices, 0).y) / (get(vertices, i).x - get(vertices, 0).x);
+			float b = get(vertices, i).y - (get(vertices, i).x * m);
+
+			if (get(vertices, i).x == get(vertices, 0).x && get(vertices, i).x == _pos.x) _b = true;
+			else if (_pos.y = (_pos.x * m) + b) _b = true;
+		}
+	}
+	return _b;
 }
