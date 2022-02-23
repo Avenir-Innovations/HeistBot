@@ -15,7 +15,9 @@ class MappingEngine
 private:
 	list<Shape> polygons;
 	list<Vector2> allVertices;
-	list<Shape> genernatedPolygons;
+	list<Shape> generatedPolygons;
+
+	float averageDistance ();
 
 	void GenerateShapes ();
 	void CheckShapes ();
@@ -24,6 +26,9 @@ private:
 public:
 	Vector2 Position;
 	list<Vector2> inputPoints;
+
+	int getGeneratedPolygonsCount () {return generatedPolygons.size();}
+	void generatedToMain () { polygons = generatedPolygons; generatedPolygons.clear(); }
 
 	// look for nearest shape(s), check if inside of nearest shape(s), if not create new polygon using the new point.
 	//TODO: Brainstorm How to extend new created shapes.

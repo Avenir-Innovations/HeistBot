@@ -3,6 +3,7 @@
 #include <string>
 #include "Vector2.h"
 #include "MovementEngine.h"
+#include "MappingEngine.h"
 #include "Shape.h"
 
 using namespace std;
@@ -14,7 +15,7 @@ bool tryParse(string s, int *i)
     {
         *i = std::stoi(s);
     }
-    catch (invalid_argument inva) { return false; }
+    catch (invalid_argument &inva) { return false; }
     return true;
 }
 
@@ -24,7 +25,7 @@ int main()
     bool quit = false;
     while (quit == false)
     {
-        cout << "Welcome to Tonight's Show! What Will It Be?\n\nOption 1: Test out tonight's Inverse Kinematics!\nOption 2: Create a Shape and Go Wild! You Deserve It.\nOption 3: Call it a Night and Head on Home.\n\nSelect an Option (1,2,3) to Continue:\t";
+        cout << "Welcome to Tonight's Show! What Will It Be?\n\nOption 1: Test out tonight's Inverse Kinematics!\nOption 2: Create a Shape and Go Wild! You Deserve It.\nOption 3: Create many a Shape and Go Wild! You Deserve It.\nOption 4: Call it a Night and Head on Home.\n\nSelect an Option (1,2,3) to Continue:\t";
         string optionChosen = "";
         cin >> optionChosen;
         int selection;
@@ -87,6 +88,89 @@ int main()
                 }
                 break;
             case 3:
+                cout << "How Many Rounds?\n";
+                cin >> endThing;
+                if (endThing < 0) endThing *= -1;
+                while (endThing > 0)
+                {
+                    MappingEngine _map;
+                    Vector2 pos;
+                    int vertexCount;
+                    cout << "How Many Points, Good Sir?\n";
+                    cin >> vertexCount;
+                    cout << "Now Then, List Off Your Desired Points.\n";
+                    if (vertexCount < 0) vertexCount *= -1;
+                    while (vertexCount > 0)
+                    {
+                        cout << "\n";
+                        pos = {0,0};
+                        cout << ("Vertex " + to_string(_map.inputPoints.size() + 1) + "\n\tX:\t");
+                        cin >> pos.x;
+                        cout << "\tY:\t";
+                        cin >> pos.y;
+                        _map.inputPoints.push_back(pos);
+                        vertexCount--;
+                    }
+                    pos = { 0,0 };
+                    
+                    _map.Initialize();
+
+                    cout << "That Right there is a collection of " + to_string(_map.getGeneratedPolygonsCount()) + ".\n";
+                    endThing--;
+                }
+                break;
+            case 4:
+                cout << "How Many Rounds?\n";
+                cin >> endThing;
+                if (endThing < 0) endThing *= -1;
+                while (endThing > 0)
+                {
+                    MappingEngine _map;
+                    Vector2 pos;
+                    int vertexCount;
+                    cout << "How Many Points, Good Sir?\n";
+                    cin >> vertexCount;
+                    cout << "Now Then, List Off Your Desired Points.\n";
+                    if (vertexCount < 0) vertexCount *= -1;
+                    while (vertexCount > 0)
+                    {
+                        cout << "\n";
+                        pos = {0,0};
+                        cout << ("Vertex " + to_string(_map.inputPoints.size() + 1) + "\n\tX:\t");
+                        cin >> pos.x;
+                        cout << "\tY:\t";
+                        cin >> pos.y;
+                        _map.inputPoints.push_back(pos);
+                        vertexCount--;
+                    }
+                    pos = { 0,0 };
+                    _map.Initialize();
+                    _map.generatedToMain();
+                    cout << "Time to Start with the New Shapes! How Many Points, Good Sir?\n";
+                    cin >> vertexCount;
+                    cout << "Now Then, List Off Your Desired Points.\n";
+                    if (vertexCount < 0) vertexCount *= -1;
+                    while (vertexCount > 0)
+                    {
+                        cout << "\n";
+                        pos = {0,0};
+                        cout << ("Vertex " + to_string(_map.inputPoints.size() + 1) + "\n\tX:\t");
+                        cin >> pos.x;
+                        cout << "\tY:\t";
+                        cin >> pos.y;
+                        _map.inputPoints.push_back(pos);
+                        vertexCount--;
+                    }
+                    pos = { 0,0 };
+                    _map.Initialize();
+                    
+
+
+                    cout << "That Right there is a collection of " + to_string(_map.getGeneratedPolygonsCount()) + ".\n";
+                    endThing--;
+                }
+                break;
+            case 5:
                 quit = true;
                 break;
             default:
