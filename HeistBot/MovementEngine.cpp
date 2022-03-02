@@ -1,7 +1,5 @@
 #include "MovementEngine.h"
 
-const float PI = std::atan(1.0) * 4;
-
 Vector2 MovementEngine::MotorAngles(Vector2 newPosition)
 {
     float x, y;

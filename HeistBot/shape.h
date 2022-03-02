@@ -3,7 +3,6 @@
 #include <array>
 #include "ListsExtensions.h"
 #include <list>
-#include <array>
 #include <iostream>
 
 using namespace std;

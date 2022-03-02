@@ -4,19 +4,9 @@
 #include "Vector2.h"
 #include "MovementEngine.h"
 #include "Shape.h"
+#include "Misc.h"
 
 using namespace std;
-
-bool tryParse(string s, int *i)
-{
-    if (s == "") return false;
-    try
-    {
-        *i = std::stoi(s);
-    }
-    catch (invalid_argument inva) { return false; }
-    return true;
-}
 
 int main()
 {
