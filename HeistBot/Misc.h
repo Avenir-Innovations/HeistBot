@@ -85,7 +85,8 @@ class NormalDistribution : Distribution
 class Dice : Distribution
 {
 	public:
-		float sides = 0;
+		int sides[6] = {1,2,3,4,5,6};
+        void setSides (int _i);
 		float pdf (float _f);
 		float cdf (float _f);
 		float quant (float _f);

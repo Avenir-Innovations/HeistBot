@@ -12,20 +12,34 @@ float NormalDistribution::cdf (float _f)
 
 float NormalDistribution::quant (float _f)
 {
-    return mean + ( SD * sqrt( 2 ) * erfInv( _f * 2 - 1 ) );
+    float __f = sqrt( 2 ) * erfInv( _f * 2 - 1 );
+    if (__f > 3) __f = 3;
+    else if (__f < -3) __f = -3;
+    return mean + ( SD * __f);
 }
 
 float Dice::pdf (float _f)
 {
-    return 
+    bool _b = false;
+    for(int i = 0; i < 6; i++){
+        if(sides[i] == (int)_f){
+            _b = true;
+            break;
+        }
+    }
+
+    if (_b) return 1 / 6;
+    else return 0; 
 }
 
 float Dice::cdf (float _f)
 {
-    return 
+    return ((int)_f) / 6
 }
 
 float Dice::quant (float _f)
 {
-    return 
+    if (_f > 1) return 6;
+    else if (_f < 1 / 6) return 0;
+    return (int)(_f * 6);
 }
