@@ -3,6 +3,7 @@
         "*.h": "cpp",
         "iostream": "cpp",
         "array": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "stdexcept": "cpp"
     }
 }
