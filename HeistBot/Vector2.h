@@ -1,5 +1,7 @@
 #pragma once
 #include <list>
+#include <tgmath.h>
+
 using namespace std;
 class Vector2
 {
@@ -25,7 +27,13 @@ class Vector2
         {
             return ( x == a.x && y == a.y );
         }
+
+        inline bool operator != (Vector2 a)
+        {
+            return ( x != a.x || y != a.y );
+        }
 };
 
+float distance (Vector2 _1, Vector2 _2);
 
 

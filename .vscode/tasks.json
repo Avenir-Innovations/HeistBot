@@ -3,11 +3,20 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                //"${file}",
+                //"-o",
+                //"${fileDirname}\\${fileBasenameNoExtension}.exe"
+
+                "$(find",
+                "${fileDirname}",
+                "-type",
+                "f",
+                "-iregex",
+                "'.*\\.cpp')",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
