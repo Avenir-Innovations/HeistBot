@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const float PI = std::atan(1.0) * 4;
+const double PI = std::atan(1.0) * 4;
 const float E = std::exp(1);
 
 float erfInv(float x){
@@ -23,7 +23,7 @@ float erfInv(float x){
 
 bool tryParse(string s)
 {
-	int _i;
+	float _i;
     if (s == "") return false;
     try
     {
@@ -86,7 +86,6 @@ class Dice : Distribution
 {
 	public:
 		int sides[6] = {1,2,3,4,5,6};
-        void setSides (int _i);
 		float pdf (float _f);
 		float cdf (float _f);
 		float quant (float _f);

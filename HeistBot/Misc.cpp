@@ -27,19 +27,18 @@ float Dice::pdf (float _f)
             break;
         }
     }
-
     if (_b) return 1 / 6;
     else return 0; 
 }
 
 float Dice::cdf (float _f)
 {
-    return ((int)_f) / 6
+    return (0 < (int)_f) ? (((int)_f < 7) ? ((int)_f) / 6 : 1) : 0;
 }
 
 float Dice::quant (float _f)
 {
     if (_f > 1) return 6;
     else if (_f < 1 / 6) return 0;
-    return (int)(_f * 6);
+    else return (int)(_f * 6);
 }
