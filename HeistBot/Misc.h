@@ -2,6 +2,9 @@
 #include <iostream>
 #include <list>
 #include <math.h>
+#include <stdlib.h>
+#include <random>
+#include "ListsExtensions.h"
 
 using namespace std;
 
@@ -66,15 +69,21 @@ int pushToInt (float _f)
 class Distribution
 {
 	public:
+        float min = 0;
+        float max = 1;
 		float pdf (float _f) { return _f; }
 		float cdf (float _f) { return _f; }
 		float cdf (float _u, float _l) { return cdf(_u) - cdf(_l); }
 		float quant (float _f) { return _f; }
+        float RandomNumber ();
+        float RandomNumber (float _l, float _u);
 };
 
 class NormalDistribution : Distribution
 {
 	public:
+        float min = -3;
+        float max = 3;
 		float mean = 0;
 		float SD = 1;
 		float pdf (float _f);
@@ -85,11 +94,56 @@ class NormalDistribution : Distribution
 class Dice : Distribution
 {
 	public:
+        float min = 1;
+        float max = 6;
 		int sides[6] = {1,2,3,4,5,6};
 		float pdf (float _f);
 		float cdf (float _f);
 		float quant (float _f);
 };
 
-float RandomNumber ();
+int randomInt (int min, int max)
+{
+    uniform_int_distribution _d = uniform_int_distribution(min, max);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    float _f = _d(gen);
+    return _f;
+}
+
+float randomFloat ()
+{
+    uniform_real_distribution<float> _d = uniform_real_distribution<float>(0, 1);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    float _f = _d(gen);
+    return _f;
+}
+
+float randomFloat (float min, float max)
+{
+    uniform_real_distribution<float> _d = uniform_real_distribution<float>(min, max);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    float _f = _d(gen);
+    return _f;
+}
+
+double randomDouble ()
+{
+    uniform_real_distribution<double> _d = uniform_real_distribution<double>(0, 1);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    float _f = _d(gen);
+    return _f;
+}
+
+double randomDouble (double min, double max)
+{
+    uniform_real_distribution<double> _d = uniform_real_distribution<double>(min, max);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    float _f = _d(gen);
+    return _f;
+}
 

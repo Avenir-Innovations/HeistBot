@@ -33,12 +33,26 @@ float Dice::pdf (float _f)
 
 float Dice::cdf (float _f)
 {
-    return (0 < (int)_f) ? (((int)_f < 7) ? ((int)_f) / 6 : 1) : 0;
+    return (min - 1 < (int)_f) ? (((int)_f < max + 1) ? ((contains(sides, (int)_f)) ? getIndex(sides, (int)_f) / 6 : 0 ) : 1) : 0;
 }
 
 float Dice::quant (float _f)
 {
-    if (_f > 1) return 6;
-    else if (_f < 1 / 6) return 0;
-    else return (int)(_f * 6);
+    if (_f > max / 6) return max;
+    else if (_f < min / 6) return 0;
+    else return sides[(int)(_f * 6)];
+}
+
+float Distribution::RandomNumber ()
+{
+    float _f = randomFloat();
+    return quant(_f);
+}
+
+float Distribution::RandomNumber (float _l, float _u)
+{
+    float _f = randomFloat(_l, _u);
+    float _q = quant(_f);
+    if (min < _q < max) return _q;
+    else return (min >= _q) ? min : max;
 }
