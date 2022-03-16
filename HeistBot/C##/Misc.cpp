@@ -1,5 +1,7 @@
 #include "Misc.h"
 
+using namespace Extras;
+
 float NormalDistribution::pdf (float _f)
 {
     return ( ( 1 / ( SD * sqrt(2 * PI) ) ) * exp( -0.5 * pow( ( _f - mean ) / 2 , 2) ) );

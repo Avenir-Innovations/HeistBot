@@ -1,13 +1,15 @@
 #include <cstdio>
 #include <iostream>
 #include <string>
-#include "Vector2.h"
-#include "MovementEngine.h"
-#include "MappingEngine.h"
-#include "Shape.h"
-#include "Misc.h"
+#include ".\Extras\Vector2.h"
+#include ".\Movement\MovementEngine.h"
+#include ".\Mapping\MappingEngine.h"
+#include ".\Extras\Shape.h"
+#include ".\Extras\Misc.h"
 
 using namespace std;
+using namespace HeistBot;
+using namespace Extras;
 
 int main()
 {
@@ -29,7 +31,7 @@ int main()
                 if (endThing < 0) endThing *= -1;
                 while (endThing > 0)
                 {
-                    MovementEngine _ME;
+                    Movement::MovementEngine _ME;
                     Vector2 pos;
                     cout << "Position, Ladies and Gentlemen! Any Position!\nX: ";
                     cin >> pos.x;
@@ -83,7 +85,7 @@ int main()
                 if (endThing < 0) endThing *= -1;
                 while (endThing > 0)
                 {
-                    MappingEngine _map;
+                    Mapping::MappingEngine _map;
                     Vector2 pos;
                     int vertexCount;
                     cout << "How Many Points, Good Sir?\n";
@@ -115,7 +117,7 @@ int main()
                 if (endThing < 0) endThing *= -1;
                 while (endThing > 0)
                 {
-                    MappingEngine _map;
+                    Mapping::MappingEngine _map;
                     Vector2 pos;
                     int vertexCount;
                     cout << "How Many Points, Good Sir?\n";

@@ -1,5 +1,9 @@
 #include "MovementEngine.h"
 
+using namespace HeistBot;
+using namespace Movement;
+using namespace Extras;
+
 Vector2 MovementEngine::MotorAngles(Vector2 newPosition)
 {
     float x, y;

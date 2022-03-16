@@ -4,6 +4,8 @@
         "iostream": "cpp",
         "array": "cpp",
         "cmath": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "list": "cpp",
+        "algorithm": "cpp"
     }
 }

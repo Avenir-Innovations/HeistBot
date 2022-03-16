@@ -1,5 +1,8 @@
 #include "MappingEngine.h"
 
+using namespace HeistBot;
+using namespace Mapping;
+
 void MappingEngine::GenerateShapes ()
 {
     generatedPolygons.clear();

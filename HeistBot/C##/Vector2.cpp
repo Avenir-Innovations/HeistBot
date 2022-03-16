@@ -1,5 +1,7 @@
 #include "Vector2.h"
 
+using namespace Extras;
+
 Vector2::Vector2()
 {
     x = 0;

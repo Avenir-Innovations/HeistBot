@@ -1,7 +1,6 @@
 #include "Shape.h"
 
-
-using namespace std;
+using namespace Extras;
 
 bool Shape::IsInside(Vector2 pos)
 {
