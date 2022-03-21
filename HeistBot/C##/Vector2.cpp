@@ -1,6 +1,6 @@
 #include "Vector2.h"
 
-using namespace Extras;
+using namespace CSS;
 
 Vector2::Vector2()
 {
