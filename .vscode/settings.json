@@ -7,6 +7,6 @@
         "stdexcept": "cpp",
         "list": "cpp",
         "algorithm": "cpp",
-        "thread": "cpp"
+        "string": "cpp"
     }
 }
