@@ -8,7 +8,7 @@
 
 using namespace std;
 
-namespace Extras
+namespace CSS
 {
     const double PI = std::atan(1.0) * 4;
     const float E = std::exp(1);
