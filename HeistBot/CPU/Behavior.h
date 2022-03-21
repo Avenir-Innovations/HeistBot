@@ -9,7 +9,7 @@ namespace HeistBot
 	{
 		class Behavior
 		{
-
+			
 		};
 	}
 }
