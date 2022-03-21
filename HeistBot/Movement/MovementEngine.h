@@ -8,7 +8,7 @@
 #include <algorithm>
 #include ".\..\C##\Misc.h"
 
-using namespace Extras;
+using namespace CSS;
 
 namespace HeistBot
 {

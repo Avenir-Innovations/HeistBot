@@ -4,7 +4,7 @@
 
 using namespace std;
 
-namespace Extras
+namespace CSS
 {
     class Vector2
     {

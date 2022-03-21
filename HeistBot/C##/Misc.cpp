@@ -1,6 +1,6 @@
 #include "Misc.h"
 
-using namespace Extras;
+using namespace CSS;
 
 float NormalDistribution::pdf (float _f)
 {
