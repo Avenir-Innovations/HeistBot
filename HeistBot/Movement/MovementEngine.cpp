@@ -17,3 +17,8 @@ Vector2 MovementEngine::MotorAngles(Vector2 newPosition)
 
     return Vector2({thetaA, thetaB});
 }
+
+void MovementEngine::moveLeg(Vector2 pos, float speed)
+{
+    
+}
