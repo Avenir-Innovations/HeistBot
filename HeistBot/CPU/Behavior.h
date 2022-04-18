@@ -13,7 +13,8 @@ namespace HeistBot
 		class Behavior
 		{
 			public:
-			list<Vector2> Movements;
+				list<Vector2> Points;
+				list<Vector2> Turns;
 		};
 	}
 }

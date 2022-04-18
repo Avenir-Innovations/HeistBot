@@ -59,13 +59,13 @@ namespace CSS
         return true;
     }
 
-    int pushToInt (float _f)
+    int pushToInt (float _f) //_f = 3.14
     {
-        string _s = to_string(_f);
-        int _h = (int)_f;
-        replace(_s, ".", "");
-        tryParse(_s, &_h);
-        return _h;
+        string _s = to_string(_f); //_s = "3.14"
+        int _h = (int)_f; //_h = 3
+        replace(_s, ".", ""); //_s = "314"
+        tryParse(_s, &_h); //if _s can be turned into an int, _h = _s;   _h = 314;
+        return _h; //returns 314
     };
 
     class Distribution
