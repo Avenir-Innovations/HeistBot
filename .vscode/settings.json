@@ -1,12 +1,14 @@
 {
     "files.associations": {
-        "*.h": "cpp",
-        "iostream": "cpp",
-        "array": "cpp",
-        "cmath": "cpp",
-        "stdexcept": "cpp",
-        "list": "cpp",
-        "algorithm": "cpp",
-        "string": "cpp"
+      "*.h": "cpp",
+      "iostream": "cpp",
+      "array": "cpp",
+      "cmath": "cpp",
+      "stdexcept": "cpp",
+      "list": "cpp",
+      "algorithm": "cpp",
+      "string": "cpp",
+      "deque": "cpp",
+      "vector": "cpp"
     }
 }
