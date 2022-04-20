@@ -10,12 +10,11 @@ namespace HeistBot
 {
 	namespace CentralProcessing
 	{
-		class Behavior
+		class RoundData
 		{
 			public:
 				list<Vector2> Points;
 				list<Vector2> Times;
-				list<Vector2> Directions;
 		};
 	}
 }

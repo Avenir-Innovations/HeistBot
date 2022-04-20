@@ -11,7 +11,7 @@ using namespace CSS;
 
 namespace HeistBot
 {
-	namespace CPU
+	namespace CentralProcessing
 	{
 		class CPU
 		{
@@ -20,16 +20,33 @@ namespace HeistBot
                 Vector2 enemyPosition;
                 Mapping::MappingEngine _Mapping;
                 Movement::MovementEngine _Movement;
+                //Vision::VisionEngine _Vision;
+                //Communication::CommunicationEngine _Comms;
 
-                void Initialize();
-                void Update();
+                int activeState = 0;    //  0 is Idle, 1 is Patrol, 2 is Guard, 3 is Attack
+
+                void Initialize ();
+                void Update ();
+
+                void SaveRoundData ();
+                void LoadBehavior ();
 
             private:
+                bool DataMode = false;
                 list<Behavior> EnemyBehaviors;
+
                 Vector2 nextPosition;
                 Vector2 enemyNextPosition;
                 
+                void updatePosition ();
                 void updateEnemyPosition ();
+
+                void setActiveState ();
+
+                void Idle ();
+                void Patrol ();
+                void Guard ();
+                void Attack ();
 		};
 	}
 }
