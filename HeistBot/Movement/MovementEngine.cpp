@@ -46,12 +46,31 @@ void MovementEngine::moveLeg(int legID, Vector2 pos, float speed)
 
 }
 
-void WalkForward(int Time)
+void MovementEngine::WalkForward(int Time)
 {
-    float Stride = PI / 4;
+    float strideLength = 1.2; //Temporary
     for (int i = 0; i < Time; i++)
     {
-        //moveLeg();
+        //Do these 4 at the same time
+        moveLeg(1, Vector2(0, -13.4 / 2), 1);
+        moveLeg(3, Vector2(0, -13.4 / 2), 1);
+        moveLeg(2, Vector2(0, -13.4), 1);
+        moveLeg(4, Vector2(0, -13.4), 1);
+        //Do these 4 at the same time
+        moveLeg(1, Vector2(strideLength, -13.4), 1);
+        moveLeg(3, Vector2(strideLength, -13.4), 1);
+        moveLeg(2, Vector2(-strideLength, -13.4), 1);
+        moveLeg(4, Vector2(-strideLength, -13.4), 1);
+        //Do these 4 at the same time
+        moveLeg(1, Vector2(0, -13.4), 1);
+        moveLeg(3, Vector2(0, -13.4), 1);
+        moveLeg(2, Vector2(0, -13.4 / 2), 1);
+        moveLeg(4, Vector2(0, -13.4 / 2), 1);
+        //Do these 4 at the same time
+        moveLeg(1, Vector2(-strideLength, -13.4), 1);
+        moveLeg(3, Vector2(-strideLength, -13.4), 1);
+        moveLeg(2, Vector2(strideLength, -13.4), 1);
+        moveLeg(4, Vector2(strideLength, -13.4), 1);
     }
 }
 
