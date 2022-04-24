@@ -1,12 +1,13 @@
 #pragma once
-#include ".\..\C##\Vector2.h"
+#include "Vector2.h"
 #include <array>
 #include <iostream>
-#include ".\..\C##\ListsExtensions.h"
-#include ".\..\C##\Vector2.h"
+#include "ListsExtensions.h"
+#include "Vector2.h"
 #include <math.h>
 #include <algorithm>
-#include ".\..\C##\Misc.h"
+#include "MoteusAPI.h"
+#include "Misc.h"
 
 using namespace CSS;
 
@@ -40,7 +41,7 @@ namespace HeistBot
 
                 //  Motors Use Rotations. Use the Methods Above For Conversion. //
 
-                void RotateMotorPos(int motorID, float angle, float speed);     //Position Based Motor Movement
+                void RotateMotorPos(int motorID, float angle, float speed, float torque = 1);     //Position Based Motor Movement
                 void RotateMotorVel(int motorID, float velocity, float time);   //Velocity Based Motor Movement
 
                 void moveLeg(int legID, Vector2 pos, float speed);

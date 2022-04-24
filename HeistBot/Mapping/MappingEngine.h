@@ -1,7 +1,7 @@
 #pragma once
-#include ".\..\C##\Vector2.h"
-#include ".\..\C##\Shape.h"
-#include ".\..\C##\ListsExtensions.h"
+#include "Vector2.h"
+#include "Shapes.h"
+#include "ListsExtensions.h"
 #include <array>
 #include <list>
 #include <thread>

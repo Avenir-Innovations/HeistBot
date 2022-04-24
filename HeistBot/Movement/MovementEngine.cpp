@@ -74,16 +74,16 @@ void MovementEngine::WalkForward(int Time)
     }
 }
 
-void MovementEngine::RotateMotorPos(int motorID, float angle, float speed)
+void MovementEngine::RotateMotorPos(int motorID, float angle, float speed, float torque)
 {
-    //string dev_name("/dev/tty.usbmodemBE6118CD1");
+    string dev_name("/dev/tty.usbmodemBE6118CD1"); //IDK How imma f***ing do this but gonna have to find the /dev/ directories for all the moteuses. (Motei?)
     int moteus_id = motorID;
-    //MoteusAPI api(dev_name, moteus_id); //For Use with the MoteusAPI
+    MoteusAPI api(dev_name, moteus_id); //For Use with the MoteusAPI
 
     // send one position with speed and torque limits
     double stop_position = RadToRot(angle);
     double velocity = speed;
-    double max_torque = 1; //Example Value
+    double max_torque = torque; //Example Value
     double feedforward_torque = 0; //Example Value
-    //api.SendPositionCommand(stop_position, velocity, max_torque, feedforward_torque); //For Use with the MoteusAPI
+    api.SendPositionCommand(stop_position, velocity, max_torque, feedforward_torque); //For Use with the MoteusAPI
 }

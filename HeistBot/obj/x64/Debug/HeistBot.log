@@ -1,40 +1,375 @@
 ﻿  Validating sources
-  Copying sources remotely to 'localhost'
+  Copying sources remotely to '192.168.1.234'
   Validating architecture
   Validating architecture
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Application Type\Linux\1.0\Linux.targets(202,5): warning : Current project architecture 'x64' is incompatible with the remote system architecture 'ARM64' ('aarch64'). Please switch the project architecture to 'ARM64' in Configuration Manager. If you are cross-compiling you can ignore this warning.
   Starting remote build
   Compiling sources:
+  ListsExtensions.cpp
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning : ‘sizeof’ on array function parameter ‘arr’ will return size of ‘int*’ [-Wsizeof-array-argument]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :   int len = sizeof(arr)/sizeof(arr[0]);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :                       ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message : declared here
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :   inline int length (int arr []) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :                               ^
+  Misc.cpp
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning : ‘sizeof’ on array function parameter ‘arr’ will return size of ‘int*’ [-Wsizeof-array-argument]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :   int len = sizeof(arr)/sizeof(arr[0]);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :                       ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message : declared here
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :   inline int length (int arr []) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :                               ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(14,29): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning :      tt1 = 2/(PI*0.147) + 0.5f * lnx;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning :            ~~~~~~~~~~~~~^~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning :      tt2 = 1/(0.147) * lnx;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning :            ~~~~~~~~~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(35,27): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning : variable ‘_i’ set but not used [-Wunused-but-set-variable]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning :          float _i;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning :                ^~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning : conversion to ‘float’ from ‘std::uniform_real_distribution<double>::result_type {aka double}’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning :          float _f = _d(gen);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning :                     ~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning : conversion to ‘float’ from ‘std::uniform_real_distribution<double>::result_type {aka double}’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning :          float _f = _d(gen);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning :                     ~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(7,44): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(7,44): warning :      return ( ( 1 / ( SD * sqrt(2 * PI) ) ) * exp( -0.5 * pow( ( _f - mean ) / 2 , 2) ) );
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(7,44): warning :             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(12,15): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(12,15): warning :      return .5 * ( 1 + erf( ( _f - mean ) / ( SD * sqrt( 2 ) ) ) );
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(12,15): warning :             ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(17,27): warning : conversion to ‘float’ from ‘__gnu_cxx::__enable_if<true, double>::__type {aka double}’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(17,27): warning :      float __f = sqrt( 2 ) * erfInv( _f * 2 - 1 );
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(17,27): warning :                  ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(38,23): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(38,36): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(38,32): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(45,36): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(45,36): warning :      else return sides[(int)(_f * 6)];
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.cpp(45,36): warning :                  ~~~~~~~~~~~~~~~~~~~^
+  Shapes.cpp
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning : ‘sizeof’ on array function parameter ‘arr’ will return size of ‘int*’ [-Wsizeof-array-argument]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :   int len = sizeof(arr)/sizeof(arr[0]);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :                       ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message : declared here
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :   inline int length (int arr []) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :                               ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(19,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(19,20): warning :   for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(19,20): warning :                   ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(21,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(21,20): warning :   for (int i = 0; i < vertices.size(); i++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(21,20): warning :                   ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(23,9): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(23,9): warning :    if (i != vertices.size() - 1)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(23,9): warning :        ~~^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(141,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(141,20): warning :   for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(141,20): warning :                   ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(143,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(143,20): warning :   for (int i = 0; i < vertices.size(); i++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(143,20): warning :                   ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(145,9): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(145,9): warning :    if (i != vertices.size() - 1)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(145,9): warning :        ~~^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(186,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(186,20): warning :   for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(186,20): warning :                   ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(188,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(188,20): warning :   for (int i = 0; i < vertices.size(); i++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(188,20): warning :                   ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(190,9): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(190,9): warning :    if (i != vertices.size() - 1)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(190,9): warning :        ~~^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(229,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(229,20): warning :   for (int i = 0; i < vertices.size(); i++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(229,20): warning :                   ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(231,9): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(231,9): warning :    if (i != vertices.size() - 1)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(231,9): warning :        ~~^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(237,20): warning : suggest parentheses around assignment used as truth value [-Wparentheses]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(237,20): warning :     else if (_pos.y = (_pos.x * m) + b) _b = true;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(237,20): warning :              ~~~~~~~^~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(245,20): warning : suggest parentheses around assignment used as truth value [-Wparentheses]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(245,20): warning :     else if (_pos.y = (_pos.x * m) + b) _b = true;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Shapes.cpp(245,20): warning :              ~~~~~~~^~~~~~~~~~~~~~~~~~
+  Vector2.cpp
+  Behavior.cpp
   main.cpp
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\main.cpp(17,29): warning : catching polymorphic type ‘class std::invalid_argument’ by value [-Wcatch-value=]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\main.cpp(17,29): warning :    17 |     catch (invalid_argument inva) { return false; }
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\main.cpp(17,29): warning :       |                             ^~~~
-  Shape.cpp
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(18,20): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(18,20): warning :    18 |  for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(18,20): warning :       |                  ~~^~~~~~~~~~~~~~~~~
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(20,20): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(20,20): warning :    20 |  for (int i = 0; i < vertices.size(); i++)
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(20,20): warning :       |                  ~~^~~~~~~~~~~~~~~~~
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(22,9): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(22,9): warning :    22 |   if (i != vertices.size() - 1)
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(22,9): warning :       |       ~~^~~~~~~~~~~~~~~~~~~~~~
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(62,20): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(62,20): warning :    62 |  for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(62,20): warning :       |                  ~~^~~~~~~~~~~~~~~~~
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(64,20): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(64,20): warning :    64 |  for (int i = 0; i < vertices.size(); i++)
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(64,20): warning :       |                  ~~^~~~~~~~~~~~~~~~~
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(66,9): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(66,9): warning :    66 |   if (i != vertices.size() - 1)
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(66,9): warning :       |       ~~^~~~~~~~~~~~~~~~~~~~~~
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(106,20): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(106,20): warning :   106 |  for (int i = 0; i < vertices.size(); i++) if (pos == get(vertices, i)) return true;
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(106,20): warning :       |                  ~~^~~~~~~~~~~~~~~~~
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(108,20): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(108,20): warning :   108 |  for (int i = 0; i < vertices.size(); i++)
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(108,20): warning :       |                  ~~^~~~~~~~~~~~~~~~~
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(110,9): warning : comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::list<Vector2>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(110,9): warning :   110 |   if (i != vertices.size() - 1)
-C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Shape.cpp(110,9): warning :       |       ~~^~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning : ‘sizeof’ on array function parameter ‘arr’ will return size of ‘int*’ [-Wsizeof-array-argument]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :   int len = sizeof(arr)/sizeof(arr[0]);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :                       ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message : declared here
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :   inline int length (int arr []) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :                               ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning :      frame->WriteTime(command.watchdog_timeout, resolution.watchdog_timeout);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning :                       ~~~~~~~~^~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning :      frame->WriteTime(command.watchdog_timeout, resolution.watchdog_timeout);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning :                       ~~~~~~~~^~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning :    MultiplexParser parser(data, size);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning :                                     ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(14,29): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning :      tt1 = 2/(PI*0.147) + 0.5f * lnx;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning :            ~~~~~~~~~~~~~^~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning :      tt2 = 1/(0.147) * lnx;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning :            ~~~~~~~~~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(35,27): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning : variable ‘_i’ set but not used [-Wunused-but-set-variable]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning :          float _i;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning :                ^~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning : conversion to ‘float’ from ‘std::uniform_real_distribution<double>::result_type {aka double}’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning :          float _f = _d(gen);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning :                     ~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning : conversion to ‘float’ from ‘std::uniform_real_distribution<double>::result_type {aka double}’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning :          float _f = _d(gen);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning :                     ~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(39,59): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(39,59): warning :                  float RadToRot (float _rad) { return _rad / ( 2 * PI ); }       // Radians to Rotations
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(39,59): warning :                                                       ~~~~~^~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(40,63): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(40,63): warning :                  float RotToRad (float _rot) { return _rot * 2 * PI; }           // Rotations to Radians
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(40,63): warning :                                                       ~~~~~~~~~^~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.h(35,69): warning : conversion to ‘int’ from ‘std::__cxx11::list<CSS::Shape>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.h(35,69): warning :      int getGeneratedPolygonsCount () { return generatedPolygons.size(); }
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.h(35,69): warning :                                                ~~~~~~~~~~~~~~~~~~~~~~^~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\main.cpp(81,27): warning : unused variable ‘torque’ [-Wunused-variable]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\main.cpp(81,27): warning :                      float torque = 1;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\main.cpp(81,27): warning :                            ^~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      *size_ += sizeof(value);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      ~~~~~~~^~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :      int8_t write_command = base_command_ + [&]() {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :                             ~~~~~~~~~~~~~~^~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :        switch (new_resolution) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      *size_ += sizeof(value);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      ~~~~~~~^~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+  MappingEngine.cpp
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning : ‘sizeof’ on array function parameter ‘arr’ will return size of ‘int*’ [-Wsizeof-array-argument]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :   int len = sizeof(arr)/sizeof(arr[0]);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :                       ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message : declared here
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :   inline int length (int arr []) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :                               ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.h(35,69): warning : conversion to ‘int’ from ‘std::__cxx11::list<CSS::Shape>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.h(35,69): warning :      int getGeneratedPolygonsCount () { return generatedPolygons.size(); }
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.h(35,69): warning :                                                ~~~~~~~~~~~~~~~~~~~~~~^~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(12,25): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(12,25): warning :      for (int ii = 0; ii < allVertices.size(); ii++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(12,25): warning :                       ~~~^~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(15,27): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(15,27): warning :          for (int i = 0; i < polygons.size(); i++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(15,27): warning :                          ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(25,31): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(25,31): warning :              for (int i = 0; i < allVertices.size(); i++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(25,31): warning :                              ~~^~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(28,35): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(28,35): warning :                  for (int i = 0; i < polygons.size(); i++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(28,35): warning :                                  ~~^~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(34,81): warning : conversion to ‘int’ from ‘std::__cxx11::list<CSS::Vector2>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(34,81): warning :                  if (!(_isUsed && (_v == get(_gen.vertices, _gen.vertices.size() - 1)) && (_v != get(allVertices, i)) && (distance(get(allVertices, i), get(allVertices, ii)) < distance(_v, get(allVertices, ii))))) _v = get(allVertices, i);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(34,81): warning :                                                             ~~~~~~~~~~~~~~~~~~~~~^~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(48,23): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(48,23): warning :      for (int i = 0; i < allVertices.size(); i++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(48,23): warning :                      ~~^~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(52,29): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(52,29): warning :          for (int ii = 0; ii < allVertices.size(); ii++)
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(52,29): warning :                           ~~~^~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(61,45): warning : conversion to ‘float’ from ‘std::__cxx11::list<CSS::Vector2>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(61,45): warning :      return (totalDistance / allVertices.size());
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(61,45): warning :                              ~~~~~~~~~~~~~~~~^~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(66,37): warning : conversion to ‘int’ from ‘std::__cxx11::list<CSS::Vector2>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(66,37): warning :      int inputSize = inputPoints.size();
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(66,37): warning :                      ~~~~~~~~~~~~~~~~^~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(67,36): warning : conversion to ‘int’ from ‘std::__cxx11::list<CSS::Shape>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(67,36): warning :      int polygonSize = polygons.size();
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Mapping\MappingEngine.cpp(67,36): warning :                        ~~~~~~~~~~~~~^~
+  MoteusAPI.cpp
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning :      frame->WriteTime(command.watchdog_timeout, resolution.watchdog_timeout);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning :                       ~~~~~~~~^~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning :      frame->WriteTime(command.watchdog_timeout, resolution.watchdog_timeout);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning :                       ~~~~~~~~^~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning :    MultiplexParser parser(data, size);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning :                                     ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(103,22): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(103,22): warning :    p_com.bounds_min = bounds_min;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(103,22): warning :                       ^~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(104,22): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(104,22): warning :    p_com.bounds_max = bounds_max;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(104,22): warning :                       ^~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(188,34): warning : conversion to ‘uint {aka unsigned int}’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(188,34): warning :    uint loopsize = respstr.size() / 2;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(188,34): warning :                    ~~~~~~~~~~~~~~~^~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(277,17): warning : conversion to ‘uint {aka unsigned int}’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(277,17): warning :    uint n = write(fd_, buff.c_str(), buff.size());
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(277,17): warning :             ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(291,17): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(291,17): warning :      int n = read(fd_, b, 1);  // read a char at a time
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\MoteusAPI.cpp(291,17): warning :              ~~~~^~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      *size_ += sizeof(value);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      ~~~~~~~^~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :      int8_t write_command = base_command_ + [&]() {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :                             ~~~~~~~~~~~~~~^~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :        switch (new_resolution) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      *size_ += sizeof(value);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      ~~~~~~~^~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+  MovementEngine.cpp
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning : ‘sizeof’ on array function parameter ‘arr’ will return size of ‘int*’ [-Wsizeof-array-argument]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :   int len = sizeof(arr)/sizeof(arr[0]);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(22,22): warning :                       ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message : declared here
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :   inline int length (int arr []) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\ListsExtensions.h(21,30): message :                               ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning :      frame->WriteTime(command.watchdog_timeout, resolution.watchdog_timeout);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(611,30): warning :                       ~~~~~~~~^~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning :      frame->WriteTime(command.watchdog_timeout, resolution.watchdog_timeout);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(688,30): warning :                       ~~~~~~~~^~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning :    MultiplexParser parser(data, size);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(755,36): warning :                                     ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(14,29): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning :      tt1 = 2/(PI*0.147) + 0.5f * lnx;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(23,24): warning :            ~~~~~~~~~~~~~^~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning :      tt2 = 1/(0.147) * lnx;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(24,21): warning :            ~~~~~~~~~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(35,27): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning : variable ‘_i’ set but not used [-Wunused-but-set-variable]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning :          float _i;
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(31,15): warning :                ^~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning : conversion to ‘float’ from ‘std::uniform_real_distribution<double>::result_type {aka double}’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning :          float _f = _d(gen);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(139,22): warning :                     ~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning : conversion to ‘float’ from ‘std::uniform_real_distribution<double>::result_type {aka double}’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning :          float _f = _d(gen);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\C##\Misc.h(148,22): warning :                     ~~^~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(39,59): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(39,59): warning :                  float RadToRot (float _rad) { return _rad / ( 2 * PI ); }       // Radians to Rotations
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(39,59): warning :                                                       ~~~~~^~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(40,63): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(40,63): warning :                  float RotToRad (float _rot) { return _rot * 2 * PI; }           // Rotations to Radians
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.h(40,63): warning :                                                       ~~~~~~~~~^~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(11,19): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(11,19): warning :      float X = sqrt(pow(x, 2) + pow(y, 2));
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(11,19): warning :                ~~~~^~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(13,30): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(13,30): warning :      float thetaAB = (PI / 2) - acos((UpperLength + LowerLength - X) / (2 * UpperLength * LowerLength));
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(13,30): warning :                      ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(44,27): warning : conversion to ‘int’ from ‘float’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(44,27): warning :      RotateMotorPos(Motors.x, Thetas.x, speed);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(44,27): warning :                     ~~~~~~~^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(45,27): warning : conversion to ‘int’ from ‘float’ may alter its value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(45,27): warning :      RotateMotorPos(Motors.y, Thetas.y, speed);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(45,27): warning :                     ~~~~~~~^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(51,26): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(51,26): warning :      float strideLength = 1.2; //Temporary
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(51,26): warning :                           ^~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(55,37): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(55,37): warning :          moveLeg(1, Vector2(0, -13.4 / 2), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(55,37): warning :                                ~~~~~~^~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(56,37): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(56,37): warning :          moveLeg(3, Vector2(0, -13.4 / 2), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(56,37): warning :                                ~~~~~~^~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(57,36): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(57,36): warning :          moveLeg(2, Vector2(0, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(57,36): warning :                                     ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(58,36): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(58,36): warning :          moveLeg(4, Vector2(0, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(58,36): warning :                                     ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(60,47): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(60,47): warning :          moveLeg(1, Vector2(strideLength, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(60,47): warning :                                                ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(61,47): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(61,47): warning :          moveLeg(3, Vector2(strideLength, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(61,47): warning :                                                ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(62,48): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(62,48): warning :          moveLeg(2, Vector2(-strideLength, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(62,48): warning :                                                 ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(63,48): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(63,48): warning :          moveLeg(4, Vector2(-strideLength, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(63,48): warning :                                                 ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(65,36): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(65,36): warning :          moveLeg(1, Vector2(0, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(65,36): warning :                                     ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(66,36): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(66,36): warning :          moveLeg(3, Vector2(0, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(66,36): warning :                                     ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(67,37): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(67,37): warning :          moveLeg(2, Vector2(0, -13.4 / 2), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(67,37): warning :                                ~~~~~~^~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(68,37): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(68,37): warning :          moveLeg(4, Vector2(0, -13.4 / 2), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(68,37): warning :                                ~~~~~~^~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(70,48): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(70,48): warning :          moveLeg(1, Vector2(-strideLength, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(70,48): warning :                                                 ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(71,48): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(71,48): warning :          moveLeg(3, Vector2(-strideLength, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(71,48): warning :                                                 ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(72,47): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(72,47): warning :          moveLeg(2, Vector2(strideLength, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(72,47): warning :                                                ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(73,47): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(73,47): warning :          moveLeg(4, Vector2(strideLength, -13.4), 1);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\Movement\MovementEngine.cpp(73,47): warning :                                                ^
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      *size_ += sizeof(value);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      ~~~~~~~^~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :      int8_t write_command = base_command_ + [&]() {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :                             ~~~~~~~~~~~~~~^~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :        switch (new_resolution) {
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning :        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(307,42): warning : conversion to ‘int8_t {aka signed char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      *size_ += sizeof(value);
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning :      ~~~~~~~^~~~~~~~~~
+C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\MoteusAPI\moteus_protocol.h(202,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
   Linking objects
   HeistBot.vcxproj -> C:\Users\Unnam\Documents\GitHub\HeistBot\HeistBot\bin\x64\Debug\HeistBot.out

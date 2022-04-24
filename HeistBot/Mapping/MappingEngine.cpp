@@ -2,6 +2,7 @@
 
 using namespace HeistBot;
 using namespace Mapping;
+using namespace CSS;
 
 void MappingEngine::GenerateShapes ()
 {
@@ -19,7 +20,7 @@ void MappingEngine::GenerateShapes ()
         if (!isUsed)
         {
             if (newShape) {_gen = Shape(); _gen.vertices.push_back(get(allVertices, ii)); newShape = false;}
-            Vector2 _v;
+            Vector2 _v = Vector2(0,0);
             bool _b = false;
             for (int i = 0; i < allVertices.size(); i++)
             {
@@ -51,9 +52,9 @@ float MappingEngine::averageDistance ()
         for (int ii = 0; ii < allVertices.size(); ii++)
         {
             Vector2 _c = get(allVertices, ii);
-            if (distance(_v, c) > distance (c, _c) && !contains(UsedVertices, _c)) _v = _c;
+            if (CSS::distance(_v, c) > CSS::distance (c, _c) && !contains(UsedVertices, _c)) _v = _c;
         }
-        totalDistance += distance(_v, c);
+        totalDistance += CSS::distance(_v, c);
         UsedVertices.push_back(c);
     }
 
@@ -94,10 +95,10 @@ void MappingEngine::Update ()
 {
     //while (true)
     //{
-        std::thread thread1(&MappingEngine::CheckShapes, this);
-        thread1.join();
-        thread1 = thread(&MappingEngine::GenerateShapes, this);
-        thread1.join();
+        //std::thread thread1(&MappingEngine::CheckShapes, this);
+        //thread1.join();
+        //thread1 = thread(&MappingEngine::GenerateShapes, this);
+        //thread1.join();
     //}
 }
 

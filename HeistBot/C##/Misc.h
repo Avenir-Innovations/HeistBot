@@ -13,7 +13,7 @@ namespace CSS
     const double PI = std::atan(1.0) * 4;
     const float E = std::exp(1);
 
-    float erfInv(float x){
+    inline float erfInv(float x){
     float tt1, tt2, lnx, sgn;
     sgn = (x < 0) ? -1.0f : 1.0f;
 
@@ -26,7 +26,7 @@ namespace CSS
     return(sgn*sqrtf(-tt1 + sqrtf(tt1*tt1 - tt2)));
     };
 
-    bool tryParse(string s)
+    inline bool tryParse(string s)
     {
         float _i;
         if (s == "") return false;
@@ -38,7 +38,7 @@ namespace CSS
         return true;
     }
 
-    bool tryParse(string s, int *i) //do &int
+    inline bool tryParse(string s, int *i) //do &int
     {
         int _i = *i;
         if (s == "") return false;
@@ -51,7 +51,7 @@ namespace CSS
         return true;
     }
 
-    bool replace(std::string& str, const std::string& from, const std::string& to) {
+    inline bool replace(std::string& str, const std::string& from, const std::string& to) {
         size_t start_pos = str.find(from);
         if(start_pos == std::string::npos)
             return false;
@@ -59,7 +59,7 @@ namespace CSS
         return true;
     }
 
-    int pushToInt (float _f)
+    inline int pushToInt (float _f)
     {
         string _s = to_string(_f);
         int _h = (int)_f;
@@ -104,16 +104,16 @@ namespace CSS
             float quant (float _f);
     };
 
-    int randomInt (int min, int max)
+    /*int randomInt(int min, int max)
     {
         uniform_int_distribution _d = uniform_int_distribution(min, max);
         std::random_device rd;
         std::mt19937 gen(rd());
         float _f = _d(gen);
         return _f;
-    }
+    }*/
 
-    float randomFloat ()
+    inline float randomFloat ()
     {
         uniform_real_distribution<float> _d = uniform_real_distribution<float>(0, 1);
         std::random_device rd;
@@ -122,7 +122,7 @@ namespace CSS
         return _f;
     }
 
-    float randomFloat (float min, float max)
+    inline float randomFloat (float min, float max)
     {
         uniform_real_distribution<float> _d = uniform_real_distribution<float>(min, max);
         std::random_device rd;
@@ -131,7 +131,7 @@ namespace CSS
         return _f;
     }
 
-    double randomDouble ()
+    inline double randomDouble ()
     {
         uniform_real_distribution<double> _d = uniform_real_distribution<double>(0, 1);
         std::random_device rd;
@@ -140,7 +140,7 @@ namespace CSS
         return _f;
     }
 
-    double randomDouble (double min, double max)
+    inline double randomDouble (double min, double max)
     {
         uniform_real_distribution<double> _d = uniform_real_distribution<double>(min, max);
         std::random_device rd;

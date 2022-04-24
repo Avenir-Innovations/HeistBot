@@ -37,6 +37,9 @@ namespace CSS
             }
     };
 
-    float distance (Vector2 _1, Vector2 _2);
+    inline float distance (Vector2 _1, Vector2 _2)
+    {
+        return sqrt(((_1.x - _2.x) * (_1.x - _2.x)) + ((_1.y - _2.y) * (_1.y - _2.y)));
+    }
 }
 

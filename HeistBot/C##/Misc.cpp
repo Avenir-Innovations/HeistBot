@@ -55,6 +55,6 @@ float Distribution::RandomNumber (float _l, float _u)
 {
     float _f = randomFloat(_l, _u);
     float _q = quant(_f);
-    if (min < _q < max) return _q;
+    if (min < _q && _q < max) return _q;
     else return (min >= _q) ? min : max;
 }

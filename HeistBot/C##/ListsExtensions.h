@@ -18,7 +18,7 @@ namespace CSS
 		return _b;
 	}
 
-	int length (int arr []) {
+	inline int length (int arr []) {
 	int len = sizeof(arr)/sizeof(arr[0]);
 	return len;
 	}
@@ -26,7 +26,7 @@ namespace CSS
 	template<typename T>
 	bool contains(T _list [], T _i) {
 		bool _b = false;
-		for (int i = 0; i < length[_list]; i++)
+		for (int i = 0; i < length(_list); i++)
 		{
 			if (_i == _list[i]) _b = true;
 		}
@@ -36,7 +36,7 @@ namespace CSS
 	template<typename T>
 	int getIndex(T _list [], T _i) {
 		int __i = -1;
-		for (int i = 0; i < length[_list]; i++)
+		for (int i = 0; i < length(_list); i++)
 		{
 			if (_i == _list[i]) __i = i;
 		}

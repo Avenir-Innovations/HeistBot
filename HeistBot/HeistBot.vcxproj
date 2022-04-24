@@ -74,20 +74,30 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>.\C##\;.\Movement\;.\Mapping\;.\CPU\;.\MoteusAPI\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="ListsExtensions.cpp" />
+    <ClCompile Include="C##\ListsExtensions.cpp" />
+    <ClCompile Include="C##\Misc.cpp" />
+    <ClCompile Include="C##\Shapes.cpp" />
+    <ClCompile Include="C##\Vector2.cpp" />
+    <ClCompile Include="CPU\Behavior.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MappingEngine.cpp" />
-    <ClCompile Include="MovementEngine.cpp" />
-    <ClCompile Include="Shape.cpp" />
-    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="Mapping\MappingEngine.cpp" />
+    <ClCompile Include="MoteusAPI\MoteusAPI.cpp" />
+    <ClCompile Include="Movement\MovementEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ListsExtensions.h" />
-    <ClInclude Include="MappingEngine.h" />
-    <ClInclude Include="MovementEngine.h" />
-    <ClInclude Include="Shape.h" />
-    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="C##\ListsExtensions.h" />
+    <ClInclude Include="C##\Misc.h" />
+    <ClInclude Include="C##\Shapes.h" />
+    <ClInclude Include="C##\Vector2.h" />
+    <ClInclude Include="CPU\Behavior.h" />
+    <ClInclude Include="Mapping\MappingEngine.h" />
+    <ClInclude Include="MoteusAPI\MoteusAPI.h" />
+    <ClInclude Include="MoteusAPI\moteus_protocol.h" />
+    <ClInclude Include="Movement\MovementEngine.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
