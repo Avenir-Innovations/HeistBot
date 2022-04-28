@@ -1,7 +1,7 @@
 #pragma once
-#include ".\..\C##\Vector2.h"
-#include ".\..\C##\Shape.h"
-#include ".\..\C##\ListsExtensions.h"
+#include "Vector2.h"
+#include "Shape.h"
+#include "ListsExtensions.h"
 #include <array>
 #include <list>
 #include <thread>
@@ -24,18 +24,15 @@ namespace HeistBot
       VideoCapture getStream();
 
     public:
-      Vector2 Position;
+      Vector2 Position; //Leftover from MappingEngine Ctrl+C, Ctrl+V
       list<Vector2> ReturnCoords();
 
-      int getGeneratedPolygonsCount() { return generatedPolygons.size(); }
-      void generatedToMain()
+      int getGeneratedPolygonsCount() { return generatedPolygons.size(); } //Leftover from MappingEngine Ctrl+C, Ctrl+V
+      void generatedToMain() //Leftover from MappingEngine Ctrl+C, Ctrl+V
       {
         polygons = generatedPolygons;
         generatedPolygons.clear();
       }
-
-      // look for nearest shape(s), check if inside of nearest shape(s), if not create new polygon using the new point.
-      // TODO: Brainstorm How to extend new created shapes.
 
       void Initialize();
     };
