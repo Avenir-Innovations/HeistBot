@@ -1,4 +1,4 @@
-#include <cstdio>
+﻿#include <cstdio>
 #include <iostream>
 #include <string>
 #include "Vector2.h"
@@ -31,7 +31,7 @@ int main()
                 if (endThing < 0) endThing *= -1;
                 while (endThing > 0)
                 {
-                    //Do Stuff
+                    movement();
                 }
                 break;
             case 2:
@@ -40,7 +40,7 @@ int main()
                 if (endThing < 0) endThing *= -1;
                 while (endThing > 0)
                 {
-                    //Do Stuff
+                    vision();
                 }
                 break;
             case 3:
@@ -49,7 +49,7 @@ int main()
                 if (endThing < 0) endThing *= -1;
                 while (endThing > 0)
                 {
-                    //Do Stuff
+                    mapping();
                 }
                 break;
             case 4:
@@ -58,7 +58,7 @@ int main()
                 if (endThing < 0) endThing *= -1;
                 while (endThing > 0)
                 {
-                    //Do Stuff
+                    intelligence();
                 }
                 break;
             case 5:
