@@ -1,11 +1,11 @@
 #include <cstdio>
 #include <iostream>
 #include <string>
-#include ".\C##\Vector2.h"
-#include ".\Movement\MovementEngine.h"
-#include ".\Mapping\MappingEngine.h"
-#include ".\C##\Shape.h"
-#include ".\C##\Misc.h"
+#include "Vector2.h"
+#include "MovementEngine.h"
+#include "MappingEngine.h"
+#include "Shape.h"
+#include "Misc.h"
 
 using namespace std;
 using namespace HeistBot;
