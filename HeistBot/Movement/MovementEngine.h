@@ -1,6 +1,7 @@
 #pragma once
 #include "Vector2.h"
 #include <array>
+#include <thread>
 #include <iostream>
 #include "ListsExtensions.h"
 #include "Vector2.h"
@@ -21,7 +22,13 @@ namespace HeistBot
                 float UpperLength = 6;  //Length of Upper Segments
                 float LowerLength = 10; //Length of Lower Segments
 
-                Vector2 pastMotorAngles[4]; //See IDS for Order, Vector2s are (Theta A, Theta B)
+                float RestingHeight = 12;
+
+                float tolerance = 0.01;
+
+                int walkCycle = 0;
+
+                Vector2 pastMotorAngles[4]; //See IDs for Order, Vector2s are (Theta A, Theta B)
                 
                 /*
                     Ids for Motors and Legs are as Follows:
@@ -46,7 +53,15 @@ namespace HeistBot
 
                 void moveLeg(int legID, Vector2 pos, float speed);
 
-                void WalkForward(int Time);
+                void WalkForward(int Time, float speed, int percentLeft = 100, int percentRight = 100);
+
+                float MotorPos (int id);
+                Vector2 AnglePos (Vector2 angles);
+                Vector2 LegPos (int id);
+
+                bool VectorEqual (Vector2 a, Vector2 b);
+
+                
         };
     }
 }
