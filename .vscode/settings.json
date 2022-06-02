@@ -7,6 +7,7 @@
         "stdexcept": "cpp",
         "list": "cpp",
         "algorithm": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "complex": "cpp"
     }
 }
