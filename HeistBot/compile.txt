@@ -1,0 +1,1 @@
+sudo g++ -I . -I ./C## -I ./CPU -I ./Mapping -I ./MoteusAPI -I ./Movement -o MovementProgram *.cpp ./C##/*.cpp ./CPU/*.cpp ./Mapping/*.cpp ./MoteusAPI/*.cpp ./Movement/*.cpp -lsfml-system -lsfml-window
