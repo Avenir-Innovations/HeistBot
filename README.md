@@ -3,6 +3,8 @@
 
 HeistBOT is a Quadrupedal Robot That is Designed to act as both a "Hound" and a "Fox," Either Avoiding the Hound or Capturing the Fox When Acting as the Other.
 
+<img src="https://github.com/Avenir-Innovations/HeistBot/blob/main/assets/img/project-thumbnail.png" width="100%" alt="HeistBOT Final Design">
+
 As The Hound:
 - Protect the "Coop" and Protect the Egg
 - Patrol the area from 20ft Away
