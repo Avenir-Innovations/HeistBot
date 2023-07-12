@@ -1,5 +1,5 @@
 # HeistBOT
-### The Bringer of Period 5 / Vesta Technologies's Destruction
+### The Bringer Vesta Technologies's Destruction
 
 HeistBOT is a Quadrupedal Robot That is Designed to act as both a "Hound" and a "Fox," Either Avoiding the Hound or Capturing the Fox When Acting as the Other.
 
